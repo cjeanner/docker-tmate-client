@@ -1,0 +1,14 @@
+version: '3'
+services:
+  tmate:
+    build:
+      context: .
+      args:
+        usr: $USER
+    environment:
+      TERM: 'rxvt-unicode'
+    hostname: "tmate-${USER}"
+    volumes:
+      - /home/$USER/work:/home/$USER/work
+      - /home/$USER/.gitconfig:/home/$USER/.gitconfig
+      - /home/$USER/.ssh/id_rsa:/home/$USER/.ssh/id_rsa:ro

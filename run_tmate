@@ -1,0 +1,2 @@
+#!/bin/sh
+script -q -c "/usr/bin/tmate" /dev/null
