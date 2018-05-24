@@ -33,6 +33,7 @@ Shared volumes
 The following files/directories are shared in the container if you use the
 provided docker-compose:
 - ~/work (read-write)
+- ~/.vimrc (read-only)
 - ~/.ssh/id_rsa (read-only)
 - ~/.gitconfig (read-only)
 
