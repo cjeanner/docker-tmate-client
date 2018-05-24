@@ -17,6 +17,17 @@ Just clone this repository, go inside and run `docker-compose up -d`. Once the
 container is up, you'll be able to run a tmate inside it, using
 `docker exec -ti tmate_tmate_1 run_tmate`
 
+```Bash
+git clone https://github.com/cjeanner/docker-tmate-client
+cd docker-tmate-client
+docker-compose up -d
+docker exec -ti tmate_tmate_1 run_tmate
+```
+
+The "run_tmate" is a wrapper - there are some issues with the TTY provided by
+docker when you use the `-ti` option.
+If you want to knowm more, [read this](https://github.com/moby/moby/issues/8755)
+
 Shared volumes
 --------------
 The following files/directories are shared in the container if you use the
