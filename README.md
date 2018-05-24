@@ -18,7 +18,7 @@ container is up, you'll be able to run a tmate inside it, using
 `docker exec -ti tmate_tmate_1 run_tmate`
 
 ```Bash
-git clone https://github.com/cjeanner/docker-tmate-client
+git clone https://github.com/cjeanner/docker-tmate-client ~/.tmate
 cd docker-tmate-client
 docker-compose up -d
 docker exec -ti tmate_tmate_1 run_tmate
