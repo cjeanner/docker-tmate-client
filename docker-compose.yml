@@ -5,11 +5,10 @@ services:
       context: .
       args:
         uid: 1000
-    environment:
-      TERM: 'rxvt-unicode'
     hostname: "${USER}"
     privileged: true
     volumes:
       - ${HOME}/work:/home/tmate/work:rw
       - ${HOME}/.gitconfig:/home/tmate/.gitconfig:ro
+      - ${HOME}/.vimrc:/home/tmate/.vimrc:ro
       - ${HOME}/.ssh/id_rsa:/home/tmate/.ssh/id_rsa:ro
