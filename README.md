@@ -48,6 +48,12 @@ default and allows you to do whatever you want in your container.
 This can, of course, cause some issues. Use it wisely. Or not. I don't care
 anyway.
 
+tmate script
+------------
+A "tmate" script is provided. You can install it in some $PATH location, such as
+`/usr/local/bin/tmate`. This wrap all the magic for whale-mate - please note the
+git repository location might differ on your computer.
+
 Such wow, such nice, such more
 ------------------------------
 Please don't hesitate to provide PR on this project if you feel it lacks

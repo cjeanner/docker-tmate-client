@@ -1,0 +1,7 @@
+#!/bin/bash
+pushd ~/tmate
+docker-compose up -d
+docker exec -ti tmate_tmate_1 run_tmate
+docker-compose kill
+docker-compose rm -f
+popd
