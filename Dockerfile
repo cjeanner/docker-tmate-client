@@ -3,9 +3,20 @@ FROM fedora:latest
 ARG uid=1000
 ARG usr
 
-RUN dnf update -y
-RUN dnf install -y tmate procps-ng openssh sudo git git-review vim bash-completion python3-tox python2-tox
-RUN yum clean all
+RUN dnf update -y && \
+  dnf install -y \
+    bash-completion \
+    gcc \
+    git \
+    git-review \
+    openssh \
+    procps-ng \
+    python2-tox \
+    python3-tox \
+    sudo \
+    tmate \
+    vim \
+    && dnf clean all
 
 COPY ./start.sh /start.sh
 COPY ./run_tmate /usr/bin/run_tmate
