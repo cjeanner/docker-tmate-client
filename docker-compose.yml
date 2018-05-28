@@ -6,6 +6,8 @@ services:
       args:
         uid: 1000
         usr: "${USER}"
+    environment:
+      LOCATION: "${OLDPWD}"
     hostname: tmate
     privileged: true
     volumes:

@@ -1,2 +1,5 @@
 #!/bin/sh
+if [ -d $LOCATION ]; then
+  cd $LOCATION
+fi
 script -q -c "/usr/bin/tmate" /dev/null
