@@ -5,6 +5,8 @@ fi
 export LC_ALL=en_US.utf8
 export TERM=rxvt-unicode
 
+alias ls="ls --color"
+
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ «\1/'
 }
