@@ -4,7 +4,7 @@ ARG uid=1000
 ARG usr
 
 RUN dnf update -y
-RUN dnf install -y tmate procps-ng openssh sudo git git-review vim bash-completion
+RUN dnf install -y tmate procps-ng openssh sudo git git-review vim bash-completion python3-tox python2-tox
 RUN yum clean all
 
 COPY ./start.sh /start.sh
