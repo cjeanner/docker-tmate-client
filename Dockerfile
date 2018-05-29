@@ -11,6 +11,8 @@ RUN dnf update -y && \
     git-review \
     openssh \
     procps-ng \
+    python2-reno \
+    python3-reno \
     python2-tox \
     python3-tox \
     sudo \
