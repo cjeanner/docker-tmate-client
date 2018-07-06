@@ -15,3 +15,4 @@ services:
       - ${HOME}/.gitconfig:/home/${USER}/.gitconfig:ro
       - ${HOME}/.vimrc:/home/${USER}/.vimrc:ro
       - ${HOME}/.ssh/id_rsa:/home/${USER}/.ssh/id_rsa:ro
+      - ${HOME}/.ssh/config:/home/${USER}/.ssh/config:ro
