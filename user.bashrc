@@ -17,3 +17,9 @@ get_git_state() {
   fi
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\$(get_git_state)\[\033[00m\] \$ "
+
+if [ -S ~/.ssh/agent -a -n "$SSH_AUTH_SOCK" ]; then
+  export SSH_AUTH_SOCK=~/.ssh_agent
+else
+  eval `ssh-agent -a ~/.ssh_agent`
+fi
