@@ -6,6 +6,7 @@ ARG usr
 RUN dnf update -y && \
   dnf install -y \
     bash-completion \
+    docker \
     gcc \
     git \
     git-review \
