@@ -9,6 +9,7 @@ services:
     environment:
       LOCATION: "${OLDPWD}"
     hostname: tmate
+    network_mode: "host"
     privileged: true
     volumes:
       - ${HOME}/work:/home/${USER}/work:rw
@@ -17,3 +18,4 @@ services:
       - ${HOME}/.ssh/id_rsa:/home/${USER}/.ssh/id_rsa:ro
       - ${HOME}/.ssh/config:/home/${USER}/.ssh/config:ro
       - /var/run/docker.sock:/var/run/docker.sock:rw
+      - /var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock:rw
