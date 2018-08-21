@@ -18,6 +18,7 @@ RUN dnf update -y && \
     python3-tox \
     sudo \
     tmate \
+    vagrant \
     vim \
     && dnf clean all
 
@@ -28,7 +29,7 @@ RUN chmod +x /usr/bin/run_tmate
 
 COPY sudo.wheel /etc/sudoers.d/wheel
 
-RUN adduser --home /home/$usr --uid $uid --groups wheel --shell /bin/bash $usr
+RUN adduser --home /home/$usr --uid $uid --groups wheel,libvirt --shell /bin/bash $usr
 USER $usr
 COPY ./user.bashrc /home/$usr/.bashrc
 WORKDIR /home/$usr
